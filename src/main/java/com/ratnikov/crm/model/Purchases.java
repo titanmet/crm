@@ -30,7 +30,7 @@ public class Purchases {
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "CUSTOMER_ID", nullable = false)
-    private Customers customer;
+    private Customer customer;
 
     private Character receiptExist;
     private Character invoiceExist;
@@ -41,7 +41,7 @@ public class Purchases {
 
     private Date purchaseDate;
 
-    public Purchases(Customers customer,
+    public Purchases(Customer customer,
                      Character receiptExist,
                      Character invoiceExist,
                      SellingInvoice invoice,

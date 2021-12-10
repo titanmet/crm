@@ -34,7 +34,7 @@ public class SellingInvoice {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "CUSTOMER_ID", nullable = false)
-    private Customers customer;
+    private Customer customer;
 
     @Column(nullable = false)
     private Double netWorth;
@@ -50,7 +50,7 @@ public class SellingInvoice {
     private Currency currency;
 
     public SellingInvoice(Date invoiceDate,
-                          Customers customer,
+                          Customer customer,
                           Double netWorth,
                           Double grossValue,
                           Double taxRate,

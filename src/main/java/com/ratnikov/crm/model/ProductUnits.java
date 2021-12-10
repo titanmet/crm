@@ -31,7 +31,7 @@ public class ProductUnits {
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "PRODUCT_ID", nullable = false)
-    private Products products;
+    private Product products;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "UOM")
@@ -42,7 +42,7 @@ public class ProductUnits {
 
     private Double conversionFactor;
 
-    public ProductUnits(Products products,
+    public ProductUnits(Product products,
                         UnitsOfMeasure unitOfMeasure,
                         String alternativeUnitOfMeasure,
                         Double conversionFactor) {

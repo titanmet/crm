@@ -11,7 +11,7 @@ import javax.validation.constraints.Email;
 @ToString
 @EqualsAndHashCode
 @Entity
-public class Customers {
+public class Customer {
     @Id
     @GeneratedValue(
             strategy = GenerationType.SEQUENCE,
@@ -25,8 +25,6 @@ public class Customers {
     )
     @Column(name = "CUSTOMER_ID", nullable = false, unique = true)
     private Long id;
-    @Column(name = "org_forma", nullable = false)
-    private String orgForma;
     @Column(nullable = false)
     private String name;
     private String phone;
@@ -34,8 +32,7 @@ public class Customers {
     private String email;
     private String description;
 
-    public Customers(String orgForma, String name, String phone, @Email String email, String description) {
-        this.orgForma = orgForma;
+    public Customer(String name, String phone, @Email String email, String description) {
         this.name = name;
         this.phone = phone;
         this.email = email;

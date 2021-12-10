@@ -14,7 +14,7 @@ import javax.persistence.*;
 @ToString
 @Entity
 @Table(name = "PRODUCTS")
-public class Products {
+public class Product {
 
     @Id
     @GeneratedValue(
@@ -44,12 +44,12 @@ public class Products {
     @Enumerated(EnumType.STRING)
     private UnitsOfMeasure unitsOfMeasure;
 
-    public Products(String name,
-                    ProductType productType,
-                    Double sellingPrice,
-                    Double purchasePrice,
-                    Double taxRate,
-                    UnitsOfMeasure unitsOfMeasure) {
+    public Product(String name,
+                   ProductType productType,
+                   Double sellingPrice,
+                   Double purchasePrice,
+                   Double taxRate,
+                   UnitsOfMeasure unitsOfMeasure) {
         this.name = name;
         this.productType = productType;
         this.sellingPrice = sellingPrice;

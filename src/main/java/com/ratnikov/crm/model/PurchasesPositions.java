@@ -35,13 +35,13 @@ public class PurchasesPositions {
 
     @OneToOne
     @JoinColumn(name = "PRODUCT_ID")
-    private Products product;
+    private Product product;
 
     private Double amount;
     private Character reclamationExist;
 
     public PurchasesPositions(Purchases purchases,
-                              Products product,
+                              Product product,
                               Double amount,
                               Character reclamationExist) {
         this.purchases = purchases;
